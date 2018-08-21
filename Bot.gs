@@ -140,7 +140,7 @@ function getRandomIntInclusive(min, max) {
 
 function queryUserInfo(userID) {
 
-  var payload = {token: "xoxp-367880557796-368244927893-419676947428-85b5f1c8a00dbcb3b8a4321557855657", user: userID};
+  var payload = {token: getProperty("API_TOKEN"), user: userID};
   var url = "https://slack.com/api/users.info";
   var options = {
     'method': 'get',
