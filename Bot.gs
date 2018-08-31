@@ -8,7 +8,7 @@ function doPost(e) {
     var updateJSON = inputJSON.original_message;
     var titleUpdate = updateJSON.attachments[0].title;
     
-    var userName = queryUserInfo(inputJSON.user.id).user.profile.display_name;
+    var userName = queryUserInfo(inputJSON.user.id).user.profile.real_name;
     
     if (titleUpdate.indexOf(userName) >=0) {
       titleUpdate = titleUpdate.replace("\n"+userName, "");
